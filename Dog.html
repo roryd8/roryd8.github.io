@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+	<html>
+	<head>
+	<style>
+		#header {
+			background: #000000;
+			height: 100px;
+			border: 5px;
+			border-style: solid;
+			border-color: #FFEBCD;
+			color: #FFFFFF;
+			text-align: center;
+			font-family: "Arial Black";
+		}
+		#body {
+			background: #FFEBCD;
+			height: 525px;
+			width: 1205px;
+			border: 5px;
+			border-style: solid;
+			border-color: #DCDCDC;
+			float: right;
+			color: #000000;
+			font-family: "Arial Black";
+			font-size: 125%;
+			text-align: center;
+		}
+		#navbar {
+			background: #DCDCDC;
+			height: 525px;
+			width: 200px;
+			border: 5px;
+			border-style: solid;
+			border-color: #000000;
+			color: #000000;
+			font-family: "Arial Black";
+			font-size: 150%;
+			text-align: center;
+		}
+		#footer {
+			background: #000000;
+			height: 100px;
+			border: 5px;
+			border-style: solid;
+			border-color: #FFEBCD;
+		}
+		ul {
+    			list-style-type: none;
+			overflow: hidden;
+    			margin: 0;
+    			padding: 50;
+    			background-color: #000000;
+		}
+
+		li {
+    			float: left;
+		}
+
+		a {
+    			display: block;
+    			color: #808080;
+    			text-align: center;
+    			padding: 10px 27px;
+    			text-decoration: none;
+		}
+		a:hover {
+    			background-color: #FFFFFF;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="header"><h1>Dog Test</h1></div>
+		<div id="body">
+		<center>
+		<ul>
+			<li><a onclick="myIntelligence()">Intelligence</a></li>
+			<li><a onclick="mySociality()">Sociality</a></li>
+			<li><a onclick="mySize()">Size</a></li>
+			<li><a onclick="myCalculation()">Calculate</a></li>
+			<li><a onclick="javascript:location.reload(true)">Refresh Page</a></li>
+			<li><a>Instructions</a></li>
+			<li><a>About Us</a></li>
+		</ul>
+		</center>
+		</div>
+		<div id="navbar">
+		</div>
+		<div id="footer"></div>
+	</body>
+	<script>
+		function myIntelligence(){
+			var x = prompt("Calculate:\n 7 + 13.5");
+				if (x === "20.5") {
+						var y = prompt("What is the largest island in the world?");
+							if (y === "Greenland") {
+								var t = prompt("Solve for x:\n 6(2x + 3) + 12(-4) = 3x(7) + (-3)");
+									if (t === "-3") {
+										var para = document.createElement("P");
+    										var t = document.createTextNode("Intelligence: 3");
+    										para.appendChild(t);
+    										document.getElementById("navbar").appendChild(para);
+									} else {
+										var para = document.createElement("P");
+    										var t = document.createTextNode("Intelligence: 2");
+    										para.appendChild(t);
+    										document.getElementById("navbar").appendChild(para);
+									}
+							} else {
+								var para = document.createElement("P");
+    								var t = document.createTextNode("Intelligence: 2");
+    								para.appendChild(t);
+    								document.getElementById("navbar").appendChild(para);
+							}
+							 
+				} else {
+						var para = document.createElement("P");
+    						var t = document.createTextNode("Intelligence: 1");
+    						para.appendChild(t);
+    						document.getElementById("navbar").appendChild(para);
+				}
+		}
+	</script>
+	<script>
+		function mySociality(){
+			var x = prompt("On a scale of 1 to 3, how social are you?\n1 being a loner, 3 being constantly with friends.");
+				if (x === "1"){
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Sociality: 1");
+    					para.appendChild(t);
+    					document.getElementById("navbar").appendChild(para); 
+				} else if (x === "2") {
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Sociality: 2");
+    					para.appendChild(t);
+    					document.getElementById("navbar").appendChild(para);
+				} else if (x === "3") {
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Sociality: 3");
+    					para.appendChild(t);
+    					document.getElementById("navbar").appendChild(para);
+				} else { 
+					alert("There seems to be an issue. Please try again!");
+				}
+		}
+	</script>
+	<script>
+		function mySize(){
+			var x = prompt("On a scale of 1 to 3, how would you rate your size?\n1 being small for your age, 2 being average and 3 being big for your age.");
+				if (x === "1"){
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Size: 1");
+    					para.appendChild(t);
+    					document.getElementById("navbar").appendChild(para); 
+				} else if (x === "2") {
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Size: 2");
+    					para.appendChild(t);
+    					document.getElementById("navbar").appendChild(para);
+				} else if (x === "3") {
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Size: 3");
+    					para.appendChild(t);
+    					document.getElementById("navbar").appendChild(para);
+				} else { 
+					alert("There seems to be an issue. Please try again!");
+				}
+		}
+	</script>
+	<script>
+		function myCalculation() {
+			var x = prompt("Enter your scores!\nSample: Intelligence Score Sociality Score Size Score");
+				if (x === "3 3 3") {
+					alert("You are a German Shepherd!");
+					var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 3 2") {
+					alert("You are a poodle!");
+					var x = document.createElement("IMG");
+    						x.setAttribute("src", "http://cdn3-www.dogtime.com/assets/uploads/2011/01/file_23200_poodle.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "Poodle");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("Poodle").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Poodles are medium-sized, beautiful dogs. Their fur can be an issue if you don't groom it, but poodles are suitable for any environment. They are intelligent and easy to train.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/poodle/");
+						link.setAttribute("id", "PL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 3 1") {
+					alert("You are a border collie!");
+					var x = document.createElement("IMG");
+    						x.setAttribute("src", "http://cdn.akc.org/akcdoglovers/BorderCollie_cutout_-_Copy.png");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "Border Collie");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("Border Collie").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Border Collies are small, extremely intelligent dogs. Their fur is reasonably long, but grooming is not an issue. Border collies require constant exercize and attention, so not every household is right for them. They are extremely easy to train.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/border-collie/");
+						link.setAttribute("id", "BCL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 2 3") {
+					alert("You are a rottweiler!");
+					var x = document.createElement("IMG");
+    						x.setAttribute("src", "http://cdn.akc.org/akcdoglovers/Rottweiler_cutout.png");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "Rottweiler");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("Rottweiler").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Rotweillers are big, fearless dogs. Their fur is not long enough for groming to be a issue. Rotteilers are loyal, and good gaurd dogs, but they may be slightly aggressive towards other animals or unfirmiliar children. They are slightly stubborn, but it's easy to love a rottweiler.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 1 3") {
+					alert("You are an akita!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "http://www.dodogs.website/wp-content/uploads/2015/02/akita.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("Akitas are a Japanese breed similar to a husky. Their fur is long, so grooming may be an issue. They are extremely energetic, so be ready to play if you encounter an akita. They are slightly aggressive, but good training will make it simple to love an akita.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/akita/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 2 2") {
+					alert("You are a doberman pinscher!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 2 1") {
+					alert("You are a Havanese!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 1 2") {
+					alert("You are a pitbull!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "3 1 1") {
+					alert("You are a jack russell!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 3 3") {
+					alert("You are a bull mastiff!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 2 3") {
+					alert("You are a husky!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 1 3") {
+					alert("You are a tosa inu!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 2 2") {
+					alert("You are a collie!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 2 1") {
+					alert("You are a shih tzu!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 1 2") {
+					alert("You are a chow chow!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 1 1") {
+					alert("You are a dachshund!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 1 1") {
+					alert("You are a Chihuahua!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 3 3") {
+					alert("You are a Afghan hound!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 2 3") {
+					alert("You are a bloodhound!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 1 3") {
+					alert("You are a borzoi!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 3 2") {
+					alert("You are a beagle!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 3 1") {
+					alert("You are a pekingese!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 2 2") {
+					alert("You are a bulldog!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 2 1") {
+					alert("You are a pug!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "1 1 2") {
+					alert("You are bull terrier!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 3 2") {
+					alert("You are a labrador!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else if (x === "2 3 1") {
+					alert("You are a Brussels griffon!");
+var x = document.createElement("IMG");
+    						x.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/96/Buck_The_GSD.jpg");
+    						x.setAttribute("width", "304");
+    						x.setAttribute("width", "228");
+    						x.setAttribute("id", "German Shepherd");
+					document.getElementById("body").appendChild(x);
+    					document.getElementById("German Shepherd").style.margin = "75 75 75 250";
+					var para = document.createElement("P");
+    					var t = document.createTextNode("German Shepherds are big, loving dogs. They have a thick coat, and are suitible for almost any environment. They are extremely intelligent and easy to train. However, they can have hip displaysia and arthritis.");
+    						para.appendChild(t);
+    						document.getElementById("body").appendChild(para);
+					var link = document.createElement("A");
+						link.setAttribute("href", "http://www.akc.org/dog-breeds/german-shepherd-dog/");
+						link.setAttribute("id", "GSL");
+						link.innerHTML = "More";
+						document.getElementById("body").appendChild(link);
+				} else {
+					alert("There seems to be an issue. Please try again!");
+				}
+		}
+	</script>
+	</html>
